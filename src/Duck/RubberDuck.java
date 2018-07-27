@@ -1,5 +1,8 @@
 package Duck;
 
+import Duck.Behavior.FlyBehavior.FlyNoWay;
+import Duck.Behavior.QuackBehavior.Sqeak;
+
 /**
  * Patito de hule
  *
@@ -12,7 +15,10 @@ public class RubberDuck extends Duck {
     public void display() {
         System.out.println("Soy un Patito de Hule");
     }
-    
-    public RubberDuck(){
-        
-    }}
+
+    public RubberDuck() {
+        quackBehavior = new Sqeak();
+        flyBehavior = new FlyNoWay();
+
+    }
+}

@@ -1,5 +1,7 @@
 package Duck;
 
+import Duck.Behavior.FlyBehavior.FlyRocketPowered;
+
 /**
  * Mini simulador de Patos
  * @author Pablo
@@ -13,8 +15,14 @@ public class MiniDuckSimulator {
         mallarDuck.performFly();
         mallarDuck.performQuack();
         rubberDuck.display();
+        rubberDuck.swin();
         rubberDuck.performFly();
         rubberDuck.performQuack();
+        Duck model = new ModelDuck();
+        model.display();
+        model.performFly();
+        model.setFlyBehavior(new FlyRocketPowered());
+        model.performFly();
     }
     
 }
